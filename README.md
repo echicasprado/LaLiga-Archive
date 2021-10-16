@@ -38,17 +38,35 @@ DESCRIBE TABLES;
 ```
 
 ## Carga masiva
+
+### Equipo Local
 ```
 COPY practica2.ligaLocal (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2.csv' WITH HEADER = TRUE;
+```
 
+### Equipo Visitante
+```
 COPY practica2.ligaVisitante (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2.csv' WITH HEADER = TRUE;
+```
 
+### Marcador
+```
 COPY practica2.ligaMarcador (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2.csv' WITH HEADER = TRUE;
 
+COPY practica2.ligaMarcador (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2_Reves.csv' WITH HEADER = TRUE;
+```
+
+### Victoria con mas goles
+```
 COPY practica2.ligaVictoria (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2.csv' WITH HEADER = TRUE;
 
+COPY practica2.ligaVictoria (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2_Reves.csv' WITH HEADER = TRUE;
+```
+### Rival
+```
 COPY practica2.ligaRival (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2.csv' WITH HEADER = TRUE;
 
+COPY practica2.ligaRival (fecha, temporada, jornada, equipo1, equipo2, goles1, goles2) FROM '/home/g2373708320101/LaLiga-Archive/15kDatos_Practica2_Reves.csv' WITH HEADER = TRUE;
 ```
 
 ## Correr script
